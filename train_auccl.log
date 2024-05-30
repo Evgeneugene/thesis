@@ -1,0 +1,91 @@
+nohup: ignoring input
+BloodMNIST STARTED:
+Using downloaded and verified file: datasets/bloodmnist.npz
+Using downloaded and verified file: datasets/bloodmnist.npz
+Using downloaded and verified file: datasets/bloodmnist.npz
+AUC-CL LOSS
+  0%|                                          | 0/100 [00:00<?, ?epoch/s, lr=0]
+  0%|                                                 | 0/17 [00:00<?, ?batch/s][A
+                                                                                [A  0%|                                          | 0/100 [00:02<?, ?epoch/s, lr=0]
+Traceback (most recent call last):
+  File "/home/mmcv/thesis/medical-t-simcne/train_tsimcne_long_blood.py", line 32, in <module>
+    Y = tsimcne.fit_transform(dataset_full_)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mmcv/thesis/medical-t-simcne/tsimcne/tsimcne.py", line 152, in fit_transform
+    self.fit(X)
+  File "/home/mmcv/thesis/medical-t-simcne/tsimcne/tsimcne.py", line 201, in fit
+    self._fit_stage(train_dl, n_epochs, lr, warmup_epochs)
+  File "/home/mmcv/thesis/medical-t-simcne/tsimcne/tsimcne.py", line 228, in _fit_stage
+    train(
+  File "/home/mmcv/thesis/medical-t-simcne/tsimcne/train.py", line 220, in train
+    batch_ret = train_one_epoch(
+                ^^^^^^^^^^^^^^^^
+  File "/home/mmcv/thesis/medical-t-simcne/tsimcne/train.py", line 311, in train_one_epoch
+    loss = criterion(
+           ^^^^^^^^^^
+  File "/home/mmcv/miniconda3/envs/tsimcne/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mmcv/miniconda3/envs/tsimcne/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: InfoNCECauchyAUCCL.forward() got an unexpected keyword argument 'backbone_features'
+DermaMNIST STARTED:
+Using downloaded and verified file: datasets/dermamnist.npz
+Using downloaded and verified file: datasets/dermamnist.npz
+Using downloaded and verified file: datasets/dermamnist.npz
+AUC-CL LOSS
+  0%|                                          | 0/100 [00:00<?, ?epoch/s, lr=0]
+  0%|                                                 | 0/10 [00:00<?, ?batch/s][A
+                                                                                [A  0%|                                          | 0/100 [00:01<?, ?epoch/s, lr=0]
+Traceback (most recent call last):
+  File "/home/mmcv/thesis/medical-t-simcne/train_tsimcne_long_dermamnist.py", line 32, in <module>
+    Y = tsimcne.fit_transform(dataset_full_)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mmcv/thesis/medical-t-simcne/tsimcne/tsimcne.py", line 152, in fit_transform
+    self.fit(X)
+  File "/home/mmcv/thesis/medical-t-simcne/tsimcne/tsimcne.py", line 201, in fit
+    self._fit_stage(train_dl, n_epochs, lr, warmup_epochs)
+  File "/home/mmcv/thesis/medical-t-simcne/tsimcne/tsimcne.py", line 228, in _fit_stage
+    train(
+  File "/home/mmcv/thesis/medical-t-simcne/tsimcne/train.py", line 220, in train
+    batch_ret = train_one_epoch(
+                ^^^^^^^^^^^^^^^^
+  File "/home/mmcv/thesis/medical-t-simcne/tsimcne/train.py", line 311, in train_one_epoch
+    loss = criterion(
+           ^^^^^^^^^^
+  File "/home/mmcv/miniconda3/envs/tsimcne/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mmcv/miniconda3/envs/tsimcne/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: InfoNCECauchyAUCCL.forward() got an unexpected keyword argument 'backbone_features'
+Leukemia STARTED:
+AUC-CL LOSS
+  0%|                                          | 0/100 [00:00<?, ?epoch/s, lr=0]
+  0%|                                                 | 0/18 [00:00<?, ?batch/s][A
+                                                                                [A  0%|                                          | 0/100 [00:05<?, ?epoch/s, lr=0]
+Traceback (most recent call last):
+  File "/home/mmcv/thesis/medical-t-simcne/train_tsimcne_long_leukemia.py", line 53, in <module>
+    Y = tsimcne.fit_transform(dataset)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mmcv/thesis/medical-t-simcne/tsimcne/tsimcne.py", line 152, in fit_transform
+    self.fit(X)
+  File "/home/mmcv/thesis/medical-t-simcne/tsimcne/tsimcne.py", line 201, in fit
+    self._fit_stage(train_dl, n_epochs, lr, warmup_epochs)
+  File "/home/mmcv/thesis/medical-t-simcne/tsimcne/tsimcne.py", line 228, in _fit_stage
+    train(
+  File "/home/mmcv/thesis/medical-t-simcne/tsimcne/train.py", line 220, in train
+    batch_ret = train_one_epoch(
+                ^^^^^^^^^^^^^^^^
+  File "/home/mmcv/thesis/medical-t-simcne/tsimcne/train.py", line 311, in train_one_epoch
+    loss = criterion(
+           ^^^^^^^^^^
+  File "/home/mmcv/miniconda3/envs/tsimcne/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mmcv/miniconda3/envs/tsimcne/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: InfoNCECauchyAUCCL.forward() got an unexpected keyword argument 'backbone_features'

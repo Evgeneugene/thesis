@@ -1,0 +1,162 @@
+BloodMNIST STARTED:
+Using downloaded and verified file: datasets/bloodmnist.npz
+Using downloaded and verified file: datasets/bloodmnist.npz
+Using downloaded and verified file: datasets/bloodmnist.npz
+AUC-CL LOSS
+  0%|                                          | 0/100 [00:00<?, ?epoch/s, lr=0]
+  0%|                                                 | 0/17 [00:00<?, ?batch/s][A
+                                                                                [A  0%|                                          | 0/100 [00:01<?, ?epoch/s, lr=0]
+Traceback (most recent call last):
+  File "/home/mmcv/thesis/medical-t-simcne/train_tsimcne_long_blood.py", line 32, in <module>
+    Y = tsimcne.fit_transform(dataset_full_)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mmcv/thesis/medical-t-simcne/tsimcne/tsimcne.py", line 152, in fit_transform
+    self.fit(X)
+  File "/home/mmcv/thesis/medical-t-simcne/tsimcne/tsimcne.py", line 201, in fit
+    self._fit_stage(train_dl, n_epochs, lr, warmup_epochs)
+  File "/home/mmcv/thesis/medical-t-simcne/tsimcne/tsimcne.py", line 228, in _fit_stage
+    train(
+  File "/home/mmcv/thesis/medical-t-simcne/tsimcne/train.py", line 220, in train
+    batch_ret = train_one_epoch(
+                ^^^^^^^^^^^^^^^^
+  File "/home/mmcv/thesis/medical-t-simcne/tsimcne/train.py", line 305, in train_one_epoch
+    features, backbone_features = model(samples)
+                                  ^^^^^^^^^^^^^^
+  File "/home/mmcv/miniconda3/envs/tsimcne/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mmcv/miniconda3/envs/tsimcne/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mmcv/thesis/medical-t-simcne/tsimcne/models/simclr_like.py", line 69, in forward
+    h = self.backbone(x)
+        ^^^^^^^^^^^^^^^^
+  File "/home/mmcv/miniconda3/envs/tsimcne/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mmcv/miniconda3/envs/tsimcne/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mmcv/thesis/medical-t-simcne/tsimcne/models/simclr_like.py", line 237, in forward
+    out = F.relu(self.bn1(self.conv1(x)), inplace=True)
+                 ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mmcv/miniconda3/envs/tsimcne/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mmcv/miniconda3/envs/tsimcne/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mmcv/miniconda3/envs/tsimcne/lib/python3.11/site-packages/torch/nn/modules/batchnorm.py", line 175, in forward
+    return F.batch_norm(
+           ^^^^^^^^^^^^^
+  File "/home/mmcv/miniconda3/envs/tsimcne/lib/python3.11/site-packages/torch/nn/functional.py", line 2482, in batch_norm
+    return torch.batch_norm(
+           ^^^^^^^^^^^^^^^^^
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 392.00 MiB. GPU 0 has a total capacity of 11.55 GiB of which 264.12 MiB is free. Process 1927402 has 10.48 GiB memory in use. Including non-PyTorch memory, this process has 780.00 MiB memory in use. Of the allocated memory 455.54 MiB is allocated by PyTorch, and 22.46 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+DermaMNIST STARTED:
+Using downloaded and verified file: datasets/dermamnist.npz
+Using downloaded and verified file: datasets/dermamnist.npz
+Using downloaded and verified file: datasets/dermamnist.npz
+AUC-CL LOSS
+  0%|                                          | 0/100 [00:00<?, ?epoch/s, lr=0]
+  0%|                                                 | 0/10 [00:00<?, ?batch/s][A
+                                                                                [A  0%|                                          | 0/100 [00:01<?, ?epoch/s, lr=0]
+Traceback (most recent call last):
+  File "/home/mmcv/thesis/medical-t-simcne/train_tsimcne_long_dermamnist.py", line 32, in <module>
+    Y = tsimcne.fit_transform(dataset_full_)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mmcv/thesis/medical-t-simcne/tsimcne/tsimcne.py", line 152, in fit_transform
+    self.fit(X)
+  File "/home/mmcv/thesis/medical-t-simcne/tsimcne/tsimcne.py", line 201, in fit
+    self._fit_stage(train_dl, n_epochs, lr, warmup_epochs)
+  File "/home/mmcv/thesis/medical-t-simcne/tsimcne/tsimcne.py", line 228, in _fit_stage
+    train(
+  File "/home/mmcv/thesis/medical-t-simcne/tsimcne/train.py", line 220, in train
+    batch_ret = train_one_epoch(
+                ^^^^^^^^^^^^^^^^
+  File "/home/mmcv/thesis/medical-t-simcne/tsimcne/train.py", line 305, in train_one_epoch
+    features, backbone_features = model(samples)
+                                  ^^^^^^^^^^^^^^
+  File "/home/mmcv/miniconda3/envs/tsimcne/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mmcv/miniconda3/envs/tsimcne/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mmcv/thesis/medical-t-simcne/tsimcne/models/simclr_like.py", line 69, in forward
+    h = self.backbone(x)
+        ^^^^^^^^^^^^^^^^
+  File "/home/mmcv/miniconda3/envs/tsimcne/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mmcv/miniconda3/envs/tsimcne/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mmcv/thesis/medical-t-simcne/tsimcne/models/simclr_like.py", line 237, in forward
+    out = F.relu(self.bn1(self.conv1(x)), inplace=True)
+                 ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mmcv/miniconda3/envs/tsimcne/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mmcv/miniconda3/envs/tsimcne/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mmcv/miniconda3/envs/tsimcne/lib/python3.11/site-packages/torch/nn/modules/batchnorm.py", line 175, in forward
+    return F.batch_norm(
+           ^^^^^^^^^^^^^
+  File "/home/mmcv/miniconda3/envs/tsimcne/lib/python3.11/site-packages/torch/nn/functional.py", line 2482, in batch_norm
+    return torch.batch_norm(
+           ^^^^^^^^^^^^^^^^^
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 392.00 MiB. GPU 0 has a total capacity of 11.55 GiB of which 264.12 MiB is free. Process 1927402 has 10.48 GiB memory in use. Including non-PyTorch memory, this process has 780.00 MiB memory in use. Of the allocated memory 455.54 MiB is allocated by PyTorch, and 22.46 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Leukemia STARTED:
+AUC-CL LOSS
+  0%|                                          | 0/100 [00:00<?, ?epoch/s, lr=0]
+  0%|                                                 | 0/18 [00:00<?, ?batch/s][A
+                                                                                [A  0%|                                          | 0/100 [00:06<?, ?epoch/s, lr=0]
+Traceback (most recent call last):
+  File "/home/mmcv/thesis/medical-t-simcne/train_tsimcne_long_leukemia.py", line 53, in <module>
+    Y = tsimcne.fit_transform(dataset)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mmcv/thesis/medical-t-simcne/tsimcne/tsimcne.py", line 152, in fit_transform
+    self.fit(X)
+  File "/home/mmcv/thesis/medical-t-simcne/tsimcne/tsimcne.py", line 201, in fit
+    self._fit_stage(train_dl, n_epochs, lr, warmup_epochs)
+  File "/home/mmcv/thesis/medical-t-simcne/tsimcne/tsimcne.py", line 228, in _fit_stage
+    train(
+  File "/home/mmcv/thesis/medical-t-simcne/tsimcne/train.py", line 220, in train
+    batch_ret = train_one_epoch(
+                ^^^^^^^^^^^^^^^^
+  File "/home/mmcv/thesis/medical-t-simcne/tsimcne/train.py", line 305, in train_one_epoch
+    features, backbone_features = model(samples)
+                                  ^^^^^^^^^^^^^^
+  File "/home/mmcv/miniconda3/envs/tsimcne/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mmcv/miniconda3/envs/tsimcne/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mmcv/thesis/medical-t-simcne/tsimcne/models/simclr_like.py", line 69, in forward
+    h = self.backbone(x)
+        ^^^^^^^^^^^^^^^^
+  File "/home/mmcv/miniconda3/envs/tsimcne/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mmcv/miniconda3/envs/tsimcne/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mmcv/thesis/medical-t-simcne/tsimcne/models/simclr_like.py", line 237, in forward
+    out = F.relu(self.bn1(self.conv1(x)), inplace=True)
+                 ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mmcv/miniconda3/envs/tsimcne/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1511, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mmcv/miniconda3/envs/tsimcne/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1520, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mmcv/miniconda3/envs/tsimcne/lib/python3.11/site-packages/torch/nn/modules/batchnorm.py", line 175, in forward
+    return F.batch_norm(
+           ^^^^^^^^^^^^^
+  File "/home/mmcv/miniconda3/envs/tsimcne/lib/python3.11/site-packages/torch/nn/functional.py", line 2482, in batch_norm
+    return torch.batch_norm(
+           ^^^^^^^^^^^^^^^^^
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 392.00 MiB. GPU 0 has a total capacity of 11.55 GiB of which 264.12 MiB is free. Process 1927402 has 10.48 GiB memory in use. Including non-PyTorch memory, this process has 780.00 MiB memory in use. Of the allocated memory 455.54 MiB is allocated by PyTorch, and 22.46 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
